@@ -1,0 +1,23 @@
+name: Publish Hate Report weekly
+on:
+  schedule:
+    - cron: '0 15 * * 2'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate completed-week recap from Sleeper
+        run: python publish_weekly.py
+      - name: Commit refreshed report
+        run: |
+          git config user.name 'hate-report-bot'
+          git config user.email 'hate-report-bot@users.noreply.github.com'
+          git add data/editorial.json
+          git diff --cached --quiet || (git commit -m 'Publish weekly Hate Report' && git push)

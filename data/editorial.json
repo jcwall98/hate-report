@@ -1,0 +1,22 @@
+{
+  "weeks": {
+    "5": {
+      "published_at": "2026-10-13T15:11:56+00:00",
+      "stories": [
+        {
+          "title": "THE WEEK’S TOP SCORE",
+          "body": "The Pittstien Files posted 181.58 points in Week 5."
+        },
+        {
+          "title": "PHOTO FINISH",
+          "body": "Wake Me Up B4 U Burrow and Soupy Doopy Poopy Boys finished 8.78 points apart (145.20–136.42)."
+        },
+        {
+          "title": "NO MERCY",
+          "body": "The widest margin was 26.18 points: Guys coach is right vs. The Pittstien Files."
+        }
+      ],
+      "source": "Sleeper matchup results"
+    }
+  }
+}
